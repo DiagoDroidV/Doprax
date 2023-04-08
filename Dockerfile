@@ -6,7 +6,7 @@ RUN apt-get install git curl python3-pip ffmpeg -y
 ARG USER=root
 USER $USER
 RUN python3 -m venv venv
-WORKDIR /app
+WORKDIR /
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 COPY requirements.txt ./requirements.txt
